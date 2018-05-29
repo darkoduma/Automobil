@@ -24,6 +24,28 @@ public class Main {
         audi.travel(3);
         audi.printMainAttributes();
         audi.travel(3);
+        audi.printMainAttributes();
+        
+        
+        
+        
+        Car testAuto = new Car();
+        testAuto.getIn();
+        testAuto.printMainAttributes();
+        testAuto.getIn();
+        testAuto.printMainAttributes();
+        testAuto.getIn();
+        testAuto.printMainAttributes();
+        testAuto.getIn();
+        testAuto.printMainAttributes();
+        testAuto.getIn();
+        testAuto.printMainAttributes();
+        testAuto.getIn();
+        testAuto.printMainAttributes();
+        testAuto.getOut();
+        testAuto.printMainAttributes();
+
+        
         
 
     }

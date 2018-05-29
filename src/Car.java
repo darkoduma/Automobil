@@ -15,10 +15,15 @@ public class Car {
     int cuurentFuel;
     int consumption;
 
+    int currentPassengers;
+    int maxPassengers;
+
     public Car() {
         this.model = "default";
         this.cuurentFuel = 0;
         this.maxFuel = 100;
+        this.currentPassengers = 1;
+        this.maxPassengers = 5;
     }
 
     public Car(int maxSpeed, int minSpeed, double weight, boolean isTheCarOn, String licences, char condition, double currentPrice, int mileagePassed) {
@@ -38,6 +43,8 @@ public class Car {
         System.out.println("Kapacitet rezervoara: " + this.maxFuel);
         System.out.println("Trenutno gorivo: " + this.cuurentFuel);
         System.out.println("Predjena kilometraza: " + this.mileagePassed);
+        System.out.println("Trenutno putnika: " + this.currentPassengers);
+        System.out.println("Maksimalan broj putnika: " + this.maxPassengers);
         System.out.println();
 
     }
@@ -75,10 +82,31 @@ public class Car {
         if (this.cuurentFuel > distance * this.consumption) {
             this.mileagePassed = this.mileagePassed + distance;
             this.cuurentFuel = this.cuurentFuel - distance * this.consumption;
+            System.out.println("Putovali ste: " + distance);
 
         } else {
             System.out.println("Nema dovoljno goriva");
         }
+    }
+
+    public void getIn() {
+
+        if (this.currentPassengers < this.maxPassengers) {
+            this.currentPassengers = this.currentPassengers + 1;
+
+        } else {
+            System.out.println("U automobilu nema mesta");
+        }
+    }
+
+    public void getOut() {
+        if (this.currentPassengers > 0) {
+            this.currentPassengers = this.currentPassengers - 1;
+
+        } else {
+            System.out.println("U automobilu nema putnika");
+        }
+        
 
     }
 
