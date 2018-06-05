@@ -1,5 +1,8 @@
 
 import loops.Loops;
+import person.Person;
+import person.Student;
+import person.Teacher;
 
 
 public class Main {
@@ -57,18 +60,31 @@ public class Main {
           
 //          Loops.testDoubleForLoop();
 
-            Loops.testMultiplicationTable();
+//            Loops.testMultiplicationTable();
           
-          
-
-          
+        Person p1 = new Person();
+        p1.showData();
+        p1.setName("Petar");
+        p1.setSurname("Petrovic");
+        p1.setJmbg("0112987700058");
+        
+        p1.showData();  
               
               
-             
-          
-          
+        Person p2 = new Person("Petar", "Petrovic", "0112987700058");
+        p2.showData();
+        
+        Student studentJovan = new Student ("Jovan", "Jovanovic", "2235");
+        studentJovan.setCurrentYear(4);
+        studentJovan.setIndexNumber("oas - 456");
+        studentJovan.showData();
+        
+        Student studentMarja = new Student("Marija", "Maricic","326448");
+        studentMarja.showData();
           
 
+        Teacher teacherMarko = new Teacher ("Marko", "Markovic", "0545554", "Serbijan", 25);
+        teacherMarko.showData();
 
     }
     
